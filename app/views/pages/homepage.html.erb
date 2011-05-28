@@ -1,0 +1,63 @@
+<% provide :title, 'Tobias Schlottke &bull; Tech Fanatic. &bull; Thinking Online-Marketing, Ad-Technology &amp; Ruby on Rails. &bull; With a certain Entrepreneurial Attitude.'.html_safe %>
+
+<script type="text/javascript" charset="utf-8">
+$(function(){
+  Slider.initialize(
+    [
+    "/assets/adyard.jpg",
+    "/assets/stern.jpg",
+    "/assets/moviepilot.jpg",
+    "/assets/github.jpg",
+    "/assets/vimico.jpg",
+    ],
+    [
+    'Founder and CPO/CTO at <a href="http://adyard.de" target="_blank">adyard</a>, a performance marketing network. <br/>Acquired by Gruner + Jahr in 2010.', 
+    'Technical project management for the <a href="http://stern.de" target="_blank">stern.de</a> relaunch in 2009.  <br/>Stern is one of the biggest german magazines.',
+    'CTO at <a href="http://moviepilot.de" target="_blank">moviepilot</a>, a movie recommender engine. It\'s the Last.fm for movies.',
+    'In love with open minds and open software.<br/> Follow me at <a href="http://github.com/tobsch" target="_blank">github</a>'
+    ]
+  )
+});
+</script>
+
+<div id="splash">
+  <div id="intro">
+    <h1>Tobias Schlottke</h1>
+    <h2>Tech Fanatic. <br /> 
+      Thinking Online-Marketing, Ad-Technology &amp; Ruby on Rails.
+      <br/> With a certain Entrepreneurial Attitude.</h2>
+      <div class="navigation-back">
+      </div>
+    </div>
+    <div class="navigation-forward">
+    </div>
+
+    <div id="graphic">
+    </div>
+    <div id="text">
+    </div>
+</div>
+
+<div id="info">
+  <%= link_to image_tag('icons/32px/xing.png'), 
+      'http://xing.com/profile/Tobias_Schlottke2/', :target => '_blank' %>
+
+  <%= link_to image_tag('icons/32px/facebook.png'), 
+      'http://facebook.com/charlie.lownoise', :target => '_blank' %>
+
+  <%= link_to image_tag('icons/32px/linkedin.png'), 
+      'http://www.linkedin.com/profile/view?id=6331851', :target => '_blank' %>
+
+  <%= mail_to 'tobias.schlottke@gmail.com',
+      image_tag('icons/32px/google.png'), :encode => 'javascript' %>
+
+  <%= link_to image_tag('icons/32px/twitter.png'),        
+      'http://twitter.com/tobsch', :target => '_blank' %>
+
+  <%= link_to image_tag('icons/32px/github.png'), 
+      'http://github.com/tobsch', :target => '_blank' %>
+
+  <%= link_to image_tag('icons/32px/spotify.png'), 
+      'http://open.spotify.com/user/pop-affe', :target => '_blank' %>
+</div>
+

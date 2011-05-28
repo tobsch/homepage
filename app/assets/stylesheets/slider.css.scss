@@ -1,0 +1,80 @@
+/* 
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+  You can use Sass (SCSS) here: http://sass-lang.com/
+*/
+#splash {
+  position: relative;
+  padding: 0;
+  margin: 0 auto 0 auto;
+  width: 645px;
+  border-radius: 7px;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.13, #333), color-stop(0.57, #000) );
+  background-image: -moz-linear-gradient(center bottom, #333 13%, #000 57% );
+  text-align: center;
+  -moz-box-shadow: 0px 0px 10px #2FAACE;
+  -webkit-box-shadow: 0px 0px 10px #2FAACE;
+  margin-bottom: 20px;
+  height: 600px;
+}
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+#splash {
+  #graphic {
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 123px;
+    top: 0px;
+    width: 400px;
+    height: 300px;
+    text-align: center;
+  }
+
+  #text{
+    width: 300px;
+    height: 100px;
+    text-align: left;
+    margin: 0 auto 0 auto;
+    position: relative;
+    top: 40px;
+    left: 0px;
+  }
+  
+  .navigation-forward {
+    background-image: url('/assets/go-forward.png');
+    background-repeat: no-repeat;
+    background-position: 55% 50%;
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 200px;
+    left: 570px;
+    border-radius: 6px 0 0 6px;
+    &:hover {
+      background-color: #2FAACE;
+      cursor: pointer;
+    }
+  } 
+  .navigation-back {
+    background-image: url('/assets/go-back.png');
+    background-repeat: no-repeat;
+    background-position: 45% 50%;
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 200px;
+    left: 0;
+    border-radius: 0 6px 6px 0;
+    &:hover {
+      background-color: #2FAACE;
+      cursor: pointer;
+    }
+  }
+  
+  #intro {
+    padding-top: 20px;
+  }
+}
