@@ -10,15 +10,31 @@ $(function(){
     "/assets/github.jpg",
     "/assets/vimico.jpg",
     ],
-    [
-    'Founder and CPO/CTO at <a href="http://adyard.de" target="_blank">adyard</a>, a performance marketing network. <br/>Acquired by Gruner + Jahr in 2010.', 
-    'Technical project management for the <a href="http://stern.de" target="_blank">stern.de</a> relaunch in 2009.  <br/>Stern is one of the biggest german magazines.',
-    'CTO at <a href="http://moviepilot.de" target="_blank">moviepilot</a>, a movie recommendation platform. It\'s the Last.fm for movies.',
-    'In love with open minds and open software.<br/> Follow me at <a href="http://github.com/tobsch" target="_blank">github</a>'
-    ]
+    $('.sliderText').map(function(){
+      var content = $(this).html();
+      $(this).hide();
+      return content;
+    })
   )
 });
 </script>
+
+<!-- search engine friendly slider texts -->
+<p class="sliderText">
+  Founder and CPO/CTO at <a href="http://adyard.de" target="_blank">adyard</a>, a performance marketing network. 
+  <br/>Acquired by Gruner + Jahr in 2010.
+</p>
+
+<p class="sliderText">
+  Technical project management for the <a href="http://stern.de" target="_blank">stern.de</a> relaunch in 2009.  <br/>Stern is one of the biggest german magazines.
+</p>
+<p class="sliderText">
+  CTO at <a href="http://moviepilot.de" target="_blank">moviepilot</a>, a movie recommendation platform. It's the Last.fm for movies.
+</p>
+
+<p class="sliderText">
+  In love with open minds and open software.<br/> Follow me at <a href="http://github.com/tobsch" target="_blank">github</a>
+</p>
 
 <div id="splash">
   <div id="intro">
