@@ -9,7 +9,19 @@ body {
   #info {
     position: relative;
     margin: 0 auto 0 auto;
-    width: 250px;
+    width: 280px;
+    
+    img {
+      opacity: 0.5;
+      -webkit-box-reflect:below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.5, transparent), to(white));
+    }
+    
+    #caption {
+      opacity: 0.0;
+      width: 100%;
+      text-align: center;
+      color: black;
+    }
   }
 }
 
