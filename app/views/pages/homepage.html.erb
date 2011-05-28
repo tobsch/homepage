@@ -55,27 +55,27 @@ $(function(){
 </div>
 
 <div id="info">
-  <%= link_to image_tag('icons/32px/xing.png'), 
+  <%= link_to image_tag('icons/32px/xing.png', :alt => 'XING'), 
       'http://xing.com/profile/Tobias_Schlottke2/', :target => '_blank' %>
 
-  <%= link_to image_tag('icons/32px/facebook.png'), 
+  <%= link_to image_tag('icons/32px/facebook.png', :alt => 'Facebook'), 
       'http://facebook.com/charlie.lownoise', :target => '_blank' %>
 
-  <%= link_to image_tag('icons/32px/linkedin.png'), 
+  <%= link_to image_tag('icons/32px/linkedin.png', :alt => 'LinkedIn'), 
       'http://www.linkedin.com/profile/view?id=6331851', :target => '_blank' %>
 
   <%= mail_to 'tobias.schlottke@gmail.com',
       image_tag('icons/32px/google.png', :alt => 'E-Mail'), :encode => 'javascript' %>
 
-  <%= link_to image_tag('icons/32px/twitter.png'),        
+  <%= link_to image_tag('icons/32px/twitter.png', :alt => 'Twitter'),        
       'http://twitter.com/tobsch', :target => '_blank' %>
 
-  <%= link_to image_tag('icons/32px/github.png'), 
+  <%= link_to image_tag('icons/32px/github.png', :alt => 'github'), 
       'http://github.com/tobsch', :target => '_blank' %>
 
   <%= link_to image_tag('icons/32px/lastfm.png', :alt => 'last.fm'), 
-      'http://open.spotify.com/user/pop-affe', :target => '_blank' %>
-  <%= link_to image_tag('icons/32px/spotify.png'), 
+      'http://www.lastfm.de/user/TobiFr', :target => '_blank' %>
+  <%= link_to image_tag('icons/32px/spotify.png', :alt => 'Spotify'), 
       'http://open.spotify.com/user/pop-affe', :target => '_blank' %>
   <div id="caption">
     test
