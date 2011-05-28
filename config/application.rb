@@ -45,5 +45,8 @@ module PersonalHomepage
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    
+    # no need for active record
+    config.frameworks -= [:active_record]
   end
 end

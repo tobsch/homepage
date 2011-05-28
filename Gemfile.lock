@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:adyard/common_deploy.git
-  revision: 43c6366eed01d614c399a5b7414bc6c73a5e0d5a
+  revision: 4b220647fb65a1c63cb97a9573c6e2750fe3fcbd
   specs:
     common_deploy (0.0.1)
       capistrano
