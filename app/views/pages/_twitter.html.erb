@@ -1,7 +1,0 @@
-<h3>Buzz</h3>
-
-<ul id="timeline">
-  <% twitter_timeline_for.each do |status| %>
-    <li class="<%= cycle(:odd, :even) %>" title="<%= status.created_at.to_s(:short) %>"><%= status %></li>
-  <% end %>
-</ul>

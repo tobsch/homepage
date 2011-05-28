@@ -1,35 +1,25 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield :title %></title>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <meta name="description" content="Tobias Schlottke: Freelance agile software development and engineering, technical project management" />
-  <meta name="verify-v1" content="j+4IANI+BZZzpzyM6v3I6K5+qUxD3QP/WmcbD7wUY+Q=" />
-  
-  <title>
-    tobias schlottke - it consulting - ruby on rails - it project management - web concepts - agile development
-  </title>
+    <%= yield %>
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-6817456-1']);
+      _gaq.push(['_trackPageview']);
 
-  <%= stylesheet_link_tag 'styles' %>
-</head>
-
-<body>
-  <div id="centered">
-    <div id="content">
-      <%= yield %>
-    </div>
-  </div>
-  
-  <script type="text/javascript">
-  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-  </script>
-  <script type="text/javascript">
-  try {
-    var pageTracker = _gat._getTracker("UA-6817456-1");
-    pageTracker._trackPageview();
-    } catch(err) {}
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
     </script>
   </body>
-  </html>
+</html>
