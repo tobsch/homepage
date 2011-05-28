@@ -1,3 +1,0 @@
-[submodule "vendor/plugins/common_deploy"]
-	path = vendor/plugins/common_deploy
-	url = git@git.adyard.de:common_deploy.git
