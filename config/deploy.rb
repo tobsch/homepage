@@ -8,7 +8,7 @@ set :repository, 'git@git.adyard.de:tobias-schlottke.git'
 # no database config
 set :rails_config_files, [ ]
 
-load_extensions :rvm, :bundler, :passenger
+load_extensions :rvm, :bundler, :passenger, :assets
 
 role :app, 's1.hamburg-ventures.de'
 role :web, 's1.hamburg-ventures.de'

@@ -4,11 +4,11 @@
 $(function(){
   Slider.initialize(
     [
-    "/assets/adyard.jpg",
-    "/assets/stern.jpg",
-    "/assets/moviepilot.jpg",
-    "/assets/github.jpg",
-    "/assets/vimico.jpg",
+    "<%= asset_path("adyard.jpg") %>",
+    "<%= asset_path("stern.jpg") %>",
+    "<%= asset_path("moviepilot.jpg") %>",
+    "<%= asset_path("github.jpg") %>",
+    "<%= asset_path("vimico.jpg") %>",
     ],
     $('.sliderText').map(function(){
       var content = $(this).html();
@@ -62,7 +62,7 @@ $(function(){
       'http://facebook.com/charlie.lownoise', :target => '_blank' %>
 
   <%= link_to image_tag('icons/32px/linkedin.png', :alt => 'LinkedIn'), 
-      'http://www.linkedin.com/profile/view?id=6331851', :target => '_blank' %>
+      'http://www.linkedin.com/in/tschlottke', :target => '_blank' %>
 
   <%= mail_to 'tobias.schlottke@gmail.com',
       image_tag('icons/32px/google.png', :alt => 'E-Mail'), :encode => 'javascript' %>

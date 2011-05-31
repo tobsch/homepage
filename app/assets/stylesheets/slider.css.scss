@@ -47,7 +47,7 @@ h1, h2, h3 {
   }
   
   .navigation-forward {
-    background-image: url('/assets/go-forward.png');
+    background-image: url('#{asset_path("go-forward.png")}');
     background-repeat: no-repeat;
     background-position: 55% 50%;
     position: absolute;
@@ -62,7 +62,7 @@ h1, h2, h3 {
     }
   } 
   .navigation-back {
-    background-image: url('/assets/go-back.png');
+    background-image: url('#{asset_path("go-back.png")}');
     background-repeat: no-repeat;
     background-position: 45% 50%;
     position: absolute;
