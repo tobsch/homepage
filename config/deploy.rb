@@ -4,9 +4,7 @@ require 'common_deploy'
 set :git_server, 'git@git.adyard.de'
 set :application, 'tobias-schlottke'
 set :repository, 'git@git.adyard.de:tobias-schlottke.git'
-
-# no database config
-set :rails_config_files, [ ]
+set :tld, 'de'
 
 load_extensions :rvm, :bundler, :passenger, :assets
 
