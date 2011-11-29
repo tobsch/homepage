@@ -8,9 +8,12 @@ gem 'rails', '3.1.3'
 gem 'sqlite3'
 
 # Asset template engines
-gem 'sass'
-gem 'coffee-script'
-gem 'uglifier'
+group :assets do
+  gem 'sass'
+  gem 'coffee-script'
+  gem 'uglifier'
+  gem 'sprockets'
+end
 
 gem 'jquery-rails'
 
