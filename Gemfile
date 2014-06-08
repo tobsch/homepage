@@ -26,14 +26,9 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :test do
-  # Pretty printed test output
-  gem 'turn', :require => false
-end
-
 group :development do
   gem 'common_deploy', 
-    :git => 'git@github.com:adyard/common_deploy.git', 
-    :require => false
-  gem 'capistrano', '<3.0'
+    #:git => 'git@github.com:adyard/common_deploy.git', 
+    path: '../common_deploy',
+    require: false
 end
