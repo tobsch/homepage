@@ -1,11 +1,16 @@
 require './config/boot'
-require 'common_deploy'
 
 # config valid only for Capistrano 3.2
-lock '3.2.1'
+lock '3.10.0'
 
 set :application, 'tobias-schlottke'
 set :repo_url, 'https://github.com/tobsch/homepage.git'
+
+set :tld, ''
+set :user, 'rails'
+set :deploy_to, Proc.new{ "/home/#{fetch(:user)}/sites/#{fetch(:application)}#{'.' + fetch(:tld) unless fetch(:tld).empty?}" }
+set :use_sudo, false
+# set :deploy_via, :remote_cache
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
@@ -60,3 +65,16 @@ set :repo_url, 'https://github.com/tobsch/homepage.git'
 #
 #end
 #
+
+# namespace :share do
+#   desc 'Install application configuration in the latest release'
+#   task :rails_config do
+#     rails_config_files.each do |type|
+#       run "cp #{release_path}/config/#{type}/#{stage}.yml #{release_path}/config/#{type}.yml"
+#     end
+#   end
+#
+#   task :uploads do
+#     run "ln -nfs #{deploy_to}/shared/uploads #{release_path}/public/uploads"
+#   end
+# end

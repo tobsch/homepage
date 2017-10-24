@@ -26,9 +26,7 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :development do
-  gem 'common_deploy', 
-    #:git => 'git@github.com:adyard/common_deploy.git', 
-    path: '../common_deploy',
-    require: false
-end
+gem 'capistrano'
+gem 'capistrano-rvm'
+gem 'capistrano-bundler'
+gem 'capistrano-rails'
