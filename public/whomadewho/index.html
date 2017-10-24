@@ -25,8 +25,8 @@
         $.post('https://api.cloudstitch.com/tobsch/einladung', {
           'message': this.innerHTML,
           'name': name,
-          'comment': $('#comment').value,
-          'email': $('#email').value,
+          'comment': $('#comment').val(),
+          'email': $('#email').val(),
           'time': date.getTime()
         })
         $('.yes, .no, .maybe, #comment, #email').hide();
