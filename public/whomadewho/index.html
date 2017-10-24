@@ -1,0 +1,185 @@
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+  <title>Personal invitation</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  <script type="text/javascript">
+    function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+      results = regex.exec(location.search);
+      return results == null ? null : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    
+    $(function(){
+      var name = getParameterByName('name');
+      if (name !== '' && name !== null){
+        var html = $('#template').html().replace('{name}', name);
+        $('body').html(html);    
+      }
+      
+      $('.yes, .maybe, .no').click(function(){
+        var date = new Date();
+        $.post('https://api.cloudstitch.com/tobsch/einladung', {
+          'message': this.innerHTML,
+          'name': name,
+          'comment': $('#comment').value,
+          'time': date.getTime()
+        })
+        $('.yes, .no, .maybe, #comment').hide();
+      })
+    })
+  </script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Droid Sans', sans-serif;
+      background: #000; 
+    }
+    
+    video { 
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      transform: translateX(-50%) translateY(-50%);
+      background: url('roskilde.jpg') no-repeat;
+      background-size: cover;
+      transition: 1s opacity;
+    }
+    
+    .stopfade { 
+      opacity: .5;
+    }
+
+    #layer { 
+      font-weight:100; 
+      background: rgba(0,0,0,0.3);
+      color: white;
+      padding: 2rem;
+      width: 33%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      margin: 0 auto;
+      font-size: 1.2rem;
+      max-height: 90%;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      margin-top: 0;
+      letter-spacing: .3rem;
+    }
+    
+    #layer button, #layer input{ 
+      display: block;
+      width: 80%;
+      padding: .4rem;
+      border: none; 
+      margin: 1rem auto; 
+      font-size: 1.3rem;
+      color: #fff;
+      border-radius: 3px; 
+      cursor: pointer;
+      transition: .3s opacity;
+      opacity: 0.40;
+    }
+    
+    #layer input {
+      color: black;
+    }
+    
+    #layer button.yes{
+      background: green;
+    }
+    
+    #layer button.no{
+      background: red;
+    }
+
+    #layer button.maybe{
+      background: orange;
+    }
+
+    #layer button:hover, #layer input:hover, #layer input:focus{ 
+      opacity: 0.75;
+    }
+
+    a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      background:rgba(0,0,0,0.5);
+      padding: .5rem;
+      transition: .6s background; 
+    }
+    a:hover{
+      background:rgba(0,0,0,0.9);
+    }
+    @media screen and (max-width: 500px) { 
+      div{width:70%;} 
+    }
+    @media screen and (max-device-width: 800px) {
+      html { background: url(roskilde.jpg) #000 no-repeat center center fixed; }
+      #bgvid { display: none; }
+    }
+    @media only screen and (max-width: 900px) {
+      #layer { 
+        width: 70%;
+        top: 10%;
+        transform: translateX(-50%) translateY(0%);
+      }
+        
+      h1{
+        font-size: 2rem;
+      }
+      
+    }
+  </style>
+</head>
+<body>
+  <script id="template" type="template">
+    <video poster="roskilde.jpg" id="bgvid" playsinline autoplay loop>
+      <source src="roskilde_final.webm" type="video/webm">
+      <source src="roskilde_final.mp4" type="video/mp4">
+    </video>
+    <div id="layer">
+      <h1>{name}, ich lade Dich ein!</h1>
+    
+      <p>
+        Manchmal passieren zwei lustige Dinge gleichzeitig:
+      </p>
+      <p>
+        Dieses mal sind es: Mein Geburtstag am 2.3. und die beste Liveband der Welt (WHOMADEWHO aus Kopenhagen), die im gemütlichsten Club der Welt (Mojo) spielt.
+      </p>
+      <p>
+        Ich finde das ist ein Zeichen und lade Dich deshalb ein, mit mir dort zu feiern!
+      </p>
+      <p>
+        <b>Wann?</b><br/>
+        Samstag der 3. März 2018. Zeit &amp; andere Details folgen später.
+        <br />
+      </p>
+      <p>
+      
+        <b>Das Konzert ist mir zu spät!</b><br/>
+        Wir gehen sicher vorher noch was Essen, komm einfach dazu.
+      </p>
+    
+      <input id-"comment" placeholder="Persönlicher Kommentar."/>
+      <button class="yes">Klar komme ich!</button>
+      <button class="maybe">Kann ich noch nicht sagen</button>
+      <button class="no">Ich kann leider nicht</button>
+    </div>
+  </script>
+</body>
+</html>
