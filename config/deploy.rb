@@ -5,7 +5,7 @@ require 'common_deploy'
 lock '3.2.1'
 
 set :application, 'tobias-schlottke'
-set :repo_url, 'git@git.metrigo.com:root/homepage.git'
+set :repo_url, 'https://github.com/tobsch/homepage.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
