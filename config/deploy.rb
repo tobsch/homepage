@@ -6,7 +6,6 @@ lock '3.10.0'
 set :application, 'tobias-schlottke'
 set :repo_url, 'https://github.com/tobsch/homepage.git'
 
-set :tld, ''
 set :user, 'rails'
 set :deploy_to, Proc.new{ "/home/#{fetch(:user)}/sites/#{fetch(:application)}#{'.' + fetch(:tld) unless fetch(:tld).empty?}" }
 set :use_sudo, false
