@@ -1,7 +1,7 @@
 require './config/boot'
 
 # config valid only for Capistrano 3.2
-lock '3.10.0'
+lock '3.10.1'
 
 set :application, 'tobias-schlottke'
 set :repo_url, 'https://github.com/tobsch/homepage.git'
