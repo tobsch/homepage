@@ -26,7 +26,7 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-gem 'capistrano'
+gem 'capistrano', '~> 3.6'
+gem 'capistrano-bundler', '~> 1.3'
 gem 'capistrano-rvm'
-gem 'capistrano-bundler'
 gem 'capistrano-rails'
